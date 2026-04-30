@@ -10,6 +10,14 @@ app.get("/", (req, res) => {
   res.json({ message: "Express server is running" });
 });
 
+app.get("/users/:id", (req, res) => {
+  const { id } = req.params;
+  const user = users.find((user) => user.id === parseInt(id));
+  if (!user) {
+    return res.status(404).json({ error: "User not found" });
+  }
+  res.json(user);
+});
 app.get("/users", (req, res) => {
   res.json(users);
 });
