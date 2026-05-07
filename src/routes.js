@@ -12,8 +12,8 @@ const users = [
 /**
  * GET /health
  */
-router.get("/health", (req, res) => {
-  res.status(200).json({
+router.get("/healthy", (req, res) => {
+  res.status(201).json({
     success: true,
     message: "Server is healthy",
   });
