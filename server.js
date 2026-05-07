@@ -25,7 +25,12 @@ app.get("/users", (req, res) => {
 app.post("/users", (req, res) => {
   const { name, email } = req.body;
 
-  if (!name || !email) {
+  if (
+    !name ||
+    !email ||
+    typeof name !== "string" ||
+    typeof email !== "string"
+  ) {
     return res.status(400).json({ error: "name and email are required" });
   }
 
