@@ -19,7 +19,7 @@ app.get("/users/:id", (req, res) => {
   res.json(user);
 });
 app.get("/users", (req, res) => {
-  res.json(users);
+  res.json(users); // Return all users
 });
 
 app.post("/users", (req, res) => {
