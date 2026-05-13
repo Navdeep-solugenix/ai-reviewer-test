@@ -1,0 +1,33 @@
+providers:
+  - name: openai
+    kind: openai
+    model: gpt-5.3-codex
+    apiKeyEnv: OPENAI_API_KEY
+
+defaultProvider: openai
+
+review:
+  include:
+    - "**/*.{js,ts,jsx,tsx}"
+  exclude:
+    - "**/*.test.*"
+    - "**/*.spec.*"
+    - "node_modules/**"
+    - "dist/**"
+  mode: diff
+  contextLines: 3
+  minSeverity: suggestion
+  maxCommentsPerFile: 20
+  concurrency: 4
+  cache: file
+  cacheDir: .ai-reviewer-cache
+
+reporters:
+  - kind: github
+    publishSummaryComment: true
+    updatePrDescription: true
+    resolveStaleComments: true
+    autoApprove:
+      enabled: true
+      maxSeverity: suggestion
+      requestChangesAbove: true

@@ -1,0 +1,26 @@
+{
+  "name": "ai-reviewer-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nav2510/ai-reviewer-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nav2510/ai-reviewer-test/issues"
+  },
+  "homepage": "https://github.com/Nav2510/ai-reviewer-test#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
