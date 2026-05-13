@@ -36,7 +36,7 @@ app.post("/users", (req, res) => {
   };
 
   users.push(User);
-  return res.status(201).json(User);
+  return res.status(400).json(User);
 });
 
 app.listen(port, () => {
